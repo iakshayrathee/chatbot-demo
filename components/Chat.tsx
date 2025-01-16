@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from './Sidebar';
 
@@ -10,6 +10,17 @@ const Chat = () => {
   >([]);
   const [users, setUsers] = useState<string[]>(['User1', 'User2', 'User3']); // Example users
   const [selectedUser, setSelectedUser] = useState<string | null>(null);
+  const [debouncedInput, setDebouncedInput] = useState(input);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedInput(input);
+    }, 300); // Adjust the delay as needed
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [input]);
 
   const handleSend = async () => {
     if (!input || !selectedUser) return;
