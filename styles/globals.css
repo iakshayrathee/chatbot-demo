@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+.chat-container {
+  @apply flex flex-col w-full max-w-md p-4 border rounded-lg shadow-lg;
+}
+
+.messages {
+  @apply flex-1 overflow-y-auto p-2;
+}
+
+.user-message {
+  @apply bg-blue-500 text-white p-2 rounded-lg my-1 self-end;
+}
+
+.bot-message {
+  @apply bg-gray-300 p-2 rounded-lg my-1 self-start;
+}
+
+.input {
+  @apply border rounded-lg p-2;
+}
+
+.send-button {
+  @apply bg-blue-500 text-white p-2 rounded-lg ml-2;
+}
+/* styles/globals.css */
+/* styles/globals.css */
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.border-b {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-gray-200 {
+  background-color: #e5e5e5;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6; /* Tailwind blue */
+}
+
+.text-white {
+  color: white;
+}
+
+.rounded {
+  border-radius: 0.375rem; /* Tailwind rounded */
+}
+
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.send-button {
+  background-color: #3b82f6; /* Tailwind blue */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
